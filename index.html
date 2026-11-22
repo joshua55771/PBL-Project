@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Anatomy 3D · Study Atlas</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<aside id="panel">
+  <h1>Anatomy 3D</h1>
+  <p class="sub">Toggle systems and regions to isolate what you are studying.</p>
+  <h2>Systems</h2>
+  <div class="row"><button id="allLayers">Overlay all layers</button><button id="boneOnly">Bones only</button></div>
+  <p class="sub">Layers load when first ticked. Use the sliders to see through muscle to bone.</p>
+  <div id="systems"></div>
+  <h2>Regions</h2>
+  <div class="row"><button id="allOn">Show all</button><button id="reset">Reset view</button></div>
+  <div id="regions"></div>
+  <h2>Parts <span id="count"></span></h2>
+  <input id="q" type="search" placeholder="Search: scaphoid, sphenoid, wrist, skull, teeth…" aria-label="Search parts">
+  <div class="row"><button id="onlyListed">Show only these</button><button id="showAllParts">Show all parts</button></div>
+  <div id="parts"></div>
+  <p class="note">Anatomy from Z-Anatomy (CC BY-SA 4.0), derived from BodyParts3D (CC BY-SA 2.1 JP, DBCLS). Nerves and vessels are drawn as tubes from the source curves.</p>
+</aside>
+<main>
+  <canvas id="c"></canvas>
+  <div id="info">Click any structure to identify it.</div>
+</main>
+<script src="https://cdn.jsdelivr.net/npm/three@0.128.0/build/three.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/GLTFLoader.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
